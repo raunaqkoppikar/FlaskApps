@@ -1,0 +1,38 @@
+body{
+	background-color: rgb(238, 225, 23);
+	color: rgb(0, 0, 0);
+	font-family: cursive;
+}
+
+h1{
+	text-align: center;
+}
+
+header{
+	text-align: center;
+	margin: 0px auto;
+}
+
+a{
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+	margin: 1%;
+}
+
+table{
+	margin: 0px auto;
+	text-align: center;
+	border: 2px solid rgb(0, 0, 0);
+}
+
+input{
+	background-color: rgb(238, 225, 23);
+	color: rgb(0, 0, 0);
+	font-family: cursive;
+	border-color: rgb(0, 0, 0);
+}
+
+input::placeholder{
+	color: rgb(0, 0, 0);
+	font-family: cursive;
+};

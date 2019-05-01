@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Customer Details</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style_gryffindor.css')}}">
+</head>
+<body>
+	<header>
+		<h1>Delete Customer Details</h1>
+	</header>
+	<section>
+		<h2><a href="/">Back to Home Page</a></h2>
+		<table>
+			<thead>
+				<th>ID</th>
+				<th>Name</th>
+				<th>City</th>
+				<th>Update</th>
+			</thead>
+			<tbody>
+				{% for customer in customers: %}
+				<tr>
+					<form action="/remove/" method="post">
+						<td><input type="hidden" name="id" value='{{customer["id"]}}'>{{customer["id"]}}</td>
+						<td><input type="text" name="name" value='{{customer["name"]}}' autocomplete="off"></td>
+						<td><input type="text" name="city" value='{{customer["city"]}}' autocomplete="off"></td>
+						<td><input type="submit" name="deleteBtn" value="Delete"></td>
+					</form>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</section>
+</body>
+</html>

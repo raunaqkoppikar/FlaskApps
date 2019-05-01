@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List of Customers</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style_gryffindor.css')}}">
+</head>
+<body>
+	<h1>List of Customers</h1>
+	<h2><a href="/">Back to Home Page</a></h2>
+	<table border="1">
+		<thead>
+			<th>Name</th>
+			<th>City</th>
+		</thead>
+		<tbody>
+			{% for customer in customers: %}
+			<tr>
+				<td>{{customer["name"]}}</td>
+				<td>{{customer["city"]}}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</body>
+</html>
